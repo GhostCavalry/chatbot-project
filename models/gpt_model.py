@@ -6,6 +6,7 @@ from langchain_openai import ChatOpenAI  # Değişen kısım
 from dotenv import load_dotenv
 import os
 
+
 # Çevresel değişkenleri yükle (OpenAI API key için)
 load_dotenv(dotenv_path=".gitignore/.env")
 
@@ -64,12 +65,15 @@ st.title("🤖 Intent Tabanlı Chatbot (OpenAI Destekli)")
 user_input = st.chat_input("Mesajınızı yazın...")
 
 if user_input:
+
     intent = predict_intent(user_input)
     st.write(f"**Tahmin Edilen Intent:** `{intent}`")
     
     with st.spinner("Yanıt oluşturuluyor..."):
         response = generate_response_with_openai(intent, user_input)  # Değişen kısım
         st.write(f"**Yanıt:** {response}")
+
+
     
     # Debug: En yakın 3 örneği göster
     st.divider()
