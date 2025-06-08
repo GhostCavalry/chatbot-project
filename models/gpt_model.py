@@ -7,10 +7,8 @@ from dotenv import load_dotenv
 import os
 
 
-# Çevresel değişkenleri yükle (OpenAI API key için)
 load_dotenv(dotenv_path=".gitignore/.env")
 
-# Excel dosyasını yükle
 @st.cache_data
 def load_data():
     df = pd.read_excel("data/dataset_last_update.xlsx", sheet_name="chatbot_user_inputs_clean")
@@ -18,7 +16,6 @@ def load_data():
 
 df = load_data()
 
-# TF-IDF ve NearestNeighbors modelini eğit
 @st.cache_resource
 def train_model():
     vectorizer = TfidfVectorizer()
