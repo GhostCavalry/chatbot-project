@@ -4,10 +4,26 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
+
 import os
 
 # Çevresel değişkenleri yükle (Gemini API key için)
-load_dotenv()
+
+
+#load_dotenv(dotenv_path=".gitignore/.env")
+#api_key = os.getenv("GOOGLE_API_KEY")
+#print(api_key)
+
+# Eski API anahtarını kaldır
+if "GOOGLE_API_KEY" in os.environ:
+    del os.environ["GOOGLE_API_KEY"]
+
+# Yeni API anahtarını yükle
+load_dotenv(dotenv_path=".gitignore/.env")
+
+# Kontrol et
+api_key = os.getenv("GOOGLE_API_KEY")
+print("Yüklü API Key:", api_key)
 
 # Excel dosyasını yükle
 @st.cache_data
