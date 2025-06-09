@@ -1,4 +1,5 @@
-Chatbot Projesi - Açık Artırma Platformu Asistanı 🤖
+# CHATBOT PROJESİ - AÇIK ARTIRMA PLATFORMU ASİSTANI 🤖
+
 MTH kodlu "Üretken Yapay Zeka Yardımı ile Chatbot Geliştirme Temelleri" dersi ödevi için hazırlanmıştır
 
 
@@ -24,7 +25,13 @@ Topluluk kullanımı için veri seti Kaggle üzerinde yayınlandı
 ![image](https://github.com/user-attachments/assets/a7151bb5-ae66-437f-936a-aa8d4c21d153)
 
 
-![image](https://github.com/user-attachments/assets/b0224fb6-7ca2-4a5f-a7be-58dfa7c44d6b)
+## 🛠️ Kullanılan Teknolojiler
+
+| Bileşen            | Teknoloji                           |
+|--------------------|-------------------------------------| 
+| Frontend           | Streamlit (Python)                  |
+| LLM Integration    | Gemini 1.5 Flash + GPT-3.5 Turbo    |
+| Intent Analysis    | TF-IDF + k-Nearest Neighbors (k-NN) |
 
 
 🚀 Streamlit Arayüz Özellikleri
@@ -34,16 +41,18 @@ Niyet görselleştirme (sınıflandırma güven skoru)
 Performans metrikleri gösterge paneli
 Mobil uyumlu tasarım
 
-![image](https://github.com/user-attachments/assets/7ef92c02-3fda-46a4-b303-280508ddaf71)
-
-![image](https://github.com/user-attachments/assets/84d438d1-7b35-4c9e-b504-b16dc8541c90)
-
 **Streamlit Arayüzü Özeti**  
 
 Bu arayüz, kullanıcı mesajlarını **niyet (intent) tabanlı** analiz ederek dinamik yanıtlar üreten bir chatbot sistemini gösteriyor. Kullanıcı mesajı girildiğinde:  
 1. **Niyet Tahmini**: Model (Gemini), mesajın içeriğini analiz ederek en olası intent'i belirliyor (örn. *"Satın Alma/Satma İşlemleri"*).  
 2. **Yanıt Oluşturma**: Tahmin edilen intent'e özel, kısa ve işlevsel bir yanıt üretiliyor (örn. teklif verme talimatları).  
 3. **Şeffaf Karar Süreci**: Altta yer alan **"Model Nasıl Karar Verdi?"** bölümünde, modelin benzerlik skorlarıyla (örn. *0.61*) hangi eğitim verilerine dayanarak karar aldığı gösteriliyor. Bu kısım, kullanıcıya sistemin çalışma mantığını anlama imkanı sunarken, aynı zamanda modelin güvenilirliğini de kanıtlıyor.  
+
+
+![image](https://github.com/user-attachments/assets/7ef92c02-3fda-46a4-b303-280508ddaf71)
+
+![image](https://github.com/user-attachments/assets/84d438d1-7b35-4c9e-b504-b16dc8541c90)
+
 
 **Öne Çıkan Özellikler**:  
 - 🎯 **Niyet odaklı** dinamik yanıtlar  
