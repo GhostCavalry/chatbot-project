@@ -7,10 +7,10 @@ MTH kodlu "Üretken Yapay Zeka Yardımı ile Chatbot Geliştirme Temelleri" ders
 
 Bu proje, açık artırma tarzı e-ticaret platformları için niyet (intent) tabanlı bir chatbot geliştirmektedir. 5 temel etkileşim kategorisine odaklanmıştır:
 
-Selamlama
-Reddetme
-Vedalaşma
-Satın Alma/Satma İşlemleri
+Selamlama  
+Reddetme  
+Vedalaşma  
+Satın Alma/Satma İşlemleri  
 Güvenlik
 
 
@@ -18,8 +18,8 @@ Güvenlik
 
 Veri Hazırlığı
 
-1.000'den fazla etiketli örnek içeren özel bir veri seti oluşturuldu
-LLM ile artırılmış veri üretimi kullanıldı
+1.000'den fazla etiketli örnek içeren özel bir veri seti oluşturuldu  
+LLM ile artırılmış veri üretimi kullanıldı  
 Topluluk kullanımı için veri seti Kaggle üzerinde yayınlandı
 
 ![image](https://github.com/user-attachments/assets/a7151bb5-ae66-437f-936a-aa8d4c21d153)
@@ -36,26 +36,25 @@ Topluluk kullanımı için veri seti Kaggle üzerinde yayınlandı
 
 🚀 Streamlit Arayüz Özellikleri
 
-Gerçek zamanlı sohbet ile mesaj geçmişi
-Niyet görselleştirme (sınıflandırma güven skoru)
-Performans metrikleri gösterge paneli
+Gerçek zamanlı sohbet ile mesaj geçmişi  
+Intent görselleştirme (sınıflandırma güven skoru)  
+Performans metrikleri gösterge paneli  
 Mobil uyumlu tasarım
 
 **Streamlit Arayüzü Özeti**  
 
 Bu arayüz, kullanıcı mesajlarını **niyet (intent) tabanlı** analiz ederek dinamik yanıtlar üreten bir chatbot sistemini gösteriyor. Kullanıcı mesajı girildiğinde:  
-1. **Niyet Tahmini**: Model (Gemini), mesajın içeriğini analiz ederek en olası intent'i belirliyor (örn. *"Satın Alma/Satma İşlemleri"*).  
+1. **Intent Tahmini**: Model (Gemini), mesajın içeriğini analiz ederek en olası intent'i belirliyor (örn. *"Satın Alma/Satma İşlemleri"*).  
 2. **Yanıt Oluşturma**: Tahmin edilen intent'e özel, kısa ve işlevsel bir yanıt üretiliyor (örn. teklif verme talimatları).  
 3. **Şeffaf Karar Süreci**: Altta yer alan **"Model Nasıl Karar Verdi?"** bölümünde, modelin benzerlik skorlarıyla (örn. *0.61*) hangi eğitim verilerine dayanarak karar aldığı gösteriliyor. Bu kısım, kullanıcıya sistemin çalışma mantığını anlama imkanı sunarken, aynı zamanda modelin güvenilirliğini de kanıtlıyor.  
 
+![image](https://github.com/user-attachments/assets/93d86fe3-1ae4-4d75-b448-e763d39e8049)  
 
-![image](https://github.com/user-attachments/assets/7ef92c02-3fda-46a4-b303-280508ddaf71)
-
-![image](https://github.com/user-attachments/assets/84d438d1-7b35-4c9e-b504-b16dc8541c90)
+![image](https://github.com/user-attachments/assets/09b5cb73-7707-43ea-810d-6bedb4092a43)
 
 
 **Öne Çıkan Özellikler**:  
-- 🎯 **Niyet odaklı** dinamik yanıtlar  
+- 🎯 **Intent odaklı** dinamik yanıtlar  
 - 🔍 **Şeffaf karar mekanizması** (benzerlik skorları ve referans alınan örnekler)  
 - 💬 **Kullanıcı dostu** sohbet arayüzü  
 
@@ -80,7 +79,7 @@ Her iki model için de matrisler neredeyse kusursuz sonuçlar gösteriyor:
 
 ![image](https://github.com/user-attachments/assets/05ce412e-2183-4b7b-93d0-5266bd081e33)
 
-Mükemmel Köşegen: Her iki matriste de köşegen dışındaki değerlerin sadece 1 hata içermesi, modellerin intent'leri ayırt etmede çok başarılı olduğunu gösterir.
+Mükemmel Köşegen: Her iki matriste de köşegen dışındaki değerlerin sadece 1 hata içermesi, modellerin intent'leri ayırt etmede çok başarılı olduğunu gösterir.  
 Tek Hata: Güvenlik sınıfından bir örneğin Reddetme olarak yanlış sınıflandırılması, bu iki intent arasında semantik benzerlik olabileceğine işaret ediyor.
 
 ⚖️ 2. Metriklerin Karşılaştırması
@@ -89,8 +88,8 @@ Tek Hata: Güvenlik sınıfından bir örneğin Reddetme olarak yanlış sınıf
 
 ✅ 3. Sonuçların İstatistiksel Anlamı
 
-%99.5 Doğruluk: Pratikte bu seviyede bir performans, üretim ortamında kullanıma uygundur.
-Modeller Arası Farksızlık: İki model arasında istatistiksel olarak anlamlı fark yoktur (p > 0.05).
+%99.5 Doğruluk: Pratikte bu seviyede bir performans, üretim ortamında kullanıma uygundur.  
+Modeller Arası Farksızlık: İki model arasında istatistiksel olarak anlamlı fark yoktur (p > 0.05).  
 Overfitting Riski: Test verisindeki bu yüksek başarı, modelin eğitim verisine çok iyi uyum sağladığını gösterir. Gerçek dünya verisiyle test önerilir.
 
 
